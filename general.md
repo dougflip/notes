@@ -20,3 +20,13 @@ type Error = {
   originalError: unknown;
 };
 ```
+
+## Configure NPM for Artifactory
+
+Point a particular "scope" to a different remote.
+This uses an ENV var for the token which is nice from a Docker perspective.
+
+```sh
+@dougflip:registry=https://dougflip.jfrog.io/artifactory/api/npm/npm/
+//dougflip.jfrog.io/artifactory/api/npm/npm/:_authToken=${RT_NPM_AUTH_TOKEN}
+```
